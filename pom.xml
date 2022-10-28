@@ -6,7 +6,7 @@
 
     <groupId>de.neviogames</groupId>
     <artifactId>Auswahlverfahren</artifactId>
-    <version>1.3.0-SNAPSHOT</version>
+    <version>1.3.0</version>
 
     <build>
         <plugins>
@@ -50,6 +50,25 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+
+
+        <!-- /!\ ========== /!\ ========== /!\ WARNING /!\ ========== /!\ ========== /!\ -->
+        <!-- NEVER PUSH THIS - DO: 'git rm - -cached pom.xml' NO SPACE BETWEEN - - | -->
+        <!-- /!\ ========== /!\ ========== /!\ WARNING /!\ ========== /!\ ========== /!\ -->
+        <dependency>
+            <groupId>org.spigot</groupId>
+            <artifactId>spigot</artifactId>
+            <version>spigot-1.7.10-SNAPSHOT-b1657</version>
+            <scope>system</scope>
+            <systemPath>G:/V/Development/Libraries/spigot-1.7.10-SNAPSHOT-b1657.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>de.neviogames</groupId>
+            <artifactId>NGLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>G:/V/Development/Libraries/NGLib.jar</systemPath>
         </dependency>
     </dependencies>
 
