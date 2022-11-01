@@ -6,7 +6,7 @@
 
     <groupId>de.neviogames</groupId>
     <artifactId>Auswahlverfahren</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.3.0</version>
 
     <build>
         <plugins>
@@ -19,15 +19,56 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
         <dependency>
+            <groupId>net.jodah</groupId>
+            <artifactId>expiringmap</artifactId>
+            <version>0.5.10</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+
+
+        <!-- /!\ ========== /!\ ========== /!\ WARNING /!\ ========== /!\ ========== /!\ -->
+        <!-- NEVER PUSH THIS - DO: 'git rm - -cached pom.xml' NO SPACE BETWEEN - - | -->
+        <!-- /!\ ========== /!\ ========== /!\ WARNING /!\ ========== /!\ ========== /!\ -->
+        <dependency>
+            <groupId>org.spigot</groupId>
+            <artifactId>spigot</artifactId>
+            <version>spigot-1.7.10-SNAPSHOT-b1657</version>
+            <scope>system</scope>
+            <systemPath>G:/V/Development/Libraries/spigot-1.7.10-SNAPSHOT-b1657.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>de.neviogames</groupId>
+            <artifactId>NGLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>G:/V/Development/Libraries/NGLib.jar</systemPath>
         </dependency>
     </dependencies>
 
